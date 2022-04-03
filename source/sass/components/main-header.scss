@@ -1,0 +1,28 @@
+
+.index-header__wrapper {
+  background: #68B738 url("/source/img/index-background-mobile.png") no-repeat;
+  background-size: object-fit;
+  color: #fff;
+  padding: 27px 35px;
+}
+
+.index-header__title {
+  @include Oswald(400, 36px, 36px);
+  margin: 0;
+}
+
+.index-header__description {
+  @include Oswald(400, 14px, 14px);
+  margin: 0;
+}
+
+.main-header__description {
+  margin-top: 25px;
+}
+
+.button--choose-program {
+  max-width: 280px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 auto;
+}

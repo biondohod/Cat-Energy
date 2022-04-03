@@ -1,0 +1,25 @@
+.how-it-works {
+  margin-bottom: 42px;
+}
+
+.how-it-works__title {
+  @include Oswald(400, 36px, 40px);
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.how-it-works__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.how-it-works__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.how-it-works__description {
+  @include Arial(14px, 18px);
+  color: #444;
+  margin: 0;
+}

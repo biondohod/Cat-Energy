@@ -1,0 +1,48 @@
+
+
+.cooperation {
+  padding: 0 19px;
+  padding-top: 28px;
+}
+
+.cooperation__title {
+  @include Oswald(400,16px,18px);
+  text-transform: uppercase;
+  color: #111;
+}
+
+.page-footer__cooperation__title {
+  margin: 0;
+}
+
+.cooperation__address {
+  @include Arial(14px, 20px);
+  color: #444;
+}
+
+.page-footer__cooperation__address {
+  margin: 0;
+}
+
+.page-footer__cooperation__location {
+  margin-top: 22px;
+}
+
+.contacts {
+  background-color: #f2f2f2;
+  padding: 39px 20px 22px 20px;
+}
+
+.contacts__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-footer__contacts__list {
+  margin: 0;
+}
+
+.contacts__copyright {
+  @include Arial(16px, 18px);
+  color: #444;
+}

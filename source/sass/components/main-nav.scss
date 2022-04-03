@@ -1,0 +1,14 @@
+
+
+.site-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__link {
+  @include Oswald(500, 20px, 20px);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}

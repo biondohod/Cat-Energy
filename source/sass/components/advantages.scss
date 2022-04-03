@@ -1,0 +1,36 @@
+.advantages {
+  margin-bottom: 27px;
+}
+
+.advantages__list {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 22px;
+  padding: 0;
+}
+
+.advantages__item {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.advantages__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.advantages__title {
+  @include Oswald(400,24px, 37px);
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 29px;
+}
+
+.advantages__description {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.advantages__link {
+  @include Oswald(400, 16px, 16px);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
