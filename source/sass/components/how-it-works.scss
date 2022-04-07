@@ -9,6 +9,8 @@
 }
 
 .how-it-works__list {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -22,4 +24,12 @@
   @include Arial(14px, 18px);
   color: #444;
   margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .how-it-works__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 630px;
+  }
 }

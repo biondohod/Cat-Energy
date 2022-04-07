@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,25 +11,28 @@
 <body class="page__body">
   <!-- Шапка -->
   <header class="page-header">
-    <a class="page-header__logo--icon" href="#">
-      <img src="./img/logo-mobile.svg" width="34" height="38" alt="Cat Energy.">
-    </a>
-    <a class="page-header__logo--text" href="#">
-      <img src="./img/cat-energy-logo.svg" width="101" height="18" alt="Cat Energy.">
-    </a>
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <div class="main-mav__wrapper">
-      <ul class="main-nav site-list">
+    <div class="page-header__logo__button__wrapper">
+      <a class="page-header__logo--icon" href="#">
+        <img src="./img/logo-mobile.svg" width="34" height="38" alt="Cat Energy.">
+      </a>
+      <a class="page-header__logo--text" href="#">
+        <img src="./img/cat-energy-logo.svg" width="101" height="18" alt="Cat Energy.">
+      </a>
+
+      <button class="main-nav__toggle main-nav__toggle--closed" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav site-list main-nav--closed main-nav--no-js">
         <li class="site-list__item">
           <a class="site-list__link site-list__link--active" href="#">Главная</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link" href="catalog.html">Каталог&nbsp;продукции</a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link" href="form.html">Подбор программы</a>
+          <a class="site-list__link" href="form.html">Подбор&nbsp;программы</a>
         </li>
       </ul>
     </div>
@@ -36,20 +40,23 @@
   <!-- Основное содержимое -->
   <main class="page-main">
     <header class="main-header index-header">
-      <div class="index-header__wrapper">
+      <div class="index-header__wrapper--text">
         <h1 class="main-header__title index-header__title">Функциональное питание для котов</h1>
         <p class="main-header__description index-header__description">Занялся собой? Займись котом!</p>
       </div>
-      <img class="main__header__img" src="/source/img/index-product-mobile.png" width="280px" height="270px" alt="Пример товара.">
-      <a class="main-header__button button button--choose-program" href="form.html">Подобрать программу</a>
+      <div class="index-header__wrapper--img">
+        <img class="main__header__img" src="/source/img/index-product-mobile.png" width="280px" height="270px"
+          alt="Пример товара.">
+        <a class="main-header__button button button--choose-program" href="form.html">Подобрать программу</a>
+      </div>
     </header>
     <!-- Преимущества -->
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <div class="advantages__wrapper">
         <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Похудение</h3>
+          <li class="advantages__item advantages__item--slim">
+            <h3 class="advantages__title advantages__title--slim">Похудение</h3>
             <p class="advantages__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету!
               Cat
@@ -57,8 +64,8 @@
             </p>
             <a class="advantages__link" href="catalog.html">Каталог Slim</a>
           </li>
-          <li class="advantages__item">
-            <h3 class="advantages__title">Набор массы</h3>
+          <li class="advantages__item advantages__item--weight">
+            <h3 class="advantages__title advantages__title--weight">Набор массы</h3>
             <p class="advantages__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему
               коту
@@ -161,7 +168,8 @@
         Конюшенная, д. 19/8
         Санкт-Петербург
       </p>
-      <img class="page-footer__cooperation__location" src="/source/img/footer-location.png" width="320px" height="362px" alt="Наш магазин на карте.">
+      <img class="page-footer__cooperation__location" src="/source/img/footer-location.png" width="320px" height="362px"
+        alt="Наш магазин на карте.">
     </div>
     <div class="page-footer__contacts__wrapper contacts">
       <img src="/source/img/cat-energy-logo.svg" width="128" height="24" alt="Логотип Cat Energy.">
@@ -190,6 +198,28 @@
       </div>
     </div>
   </footer>
+
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--no-js');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+        navToggle.classList.remove('main-nav__toggle--closed');
+        navToggle.classList.add('main-nav__toggle--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+        navToggle.classList.remove('main-nav__toggle--opened');
+        navToggle.classList.add('main-nav__toggle--closed');
+      }
+    });
+  </script>
 </body>
 
 </html>

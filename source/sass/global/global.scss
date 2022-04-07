@@ -32,10 +32,35 @@
   src: url("/source/fonts/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/source/fonts/Arial.woff2") format("woff2");
+  font-display: swap;
+}
 
 body {
   margin: 0;
-  @include Arial(14px, 18px)
+  @include Arial(14px, 18px);
+  min-width: 320px;
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+  }
+  @media (min-width: $desctop-width){
+    width: $desctop-width;
+    margin: 0 auto;
+  }
+}
+
+main {
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
+  @media (min-width: $desctop-width) {
+    padding: 0 110px;
+    margin: 0 auto;
+  }
 }
 
 img {
@@ -54,4 +79,7 @@ img {
   text-transform: uppercase;
   padding: 11px 44px;
   background-color: #68B738;
+
 }
+
+

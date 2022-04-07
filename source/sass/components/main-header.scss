@@ -1,9 +1,11 @@
 
-.index-header__wrapper {
-  background: #68B738 url("/source/img/index-background-mobile.png") no-repeat;
-  background-size: object-fit;
+.index-header__wrapper--text {
+  min-height: 320px;
+  background: #68B738 url("/source/img/index-background-mobile.png") no-repeat center;
+  background-size: cover;
   color: #fff;
   padding: 27px 35px;
+  margin-bottom: -138px;
 }
 
 .index-header__title {
@@ -13,6 +15,7 @@
 
 .index-header__description {
   @include Oswald(400, 14px, 14px);
+  text-transform: uppercase;
   margin: 0;
 }
 
@@ -20,9 +23,61 @@
   margin-top: 25px;
 }
 
+.index-header__wrapper--img {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
 .button--choose-program {
-  max-width: 280px;
+  flex-grow: 1;
   font-size: 14px;
   line-height: 18px;
-  margin: 0 auto;
+}
+
+
+@media (min-width: $tablet-width) {
+  .index-header__wrapper--text {
+    min-height: min-content;
+    background: none;
+    margin: 0;
+    padding: 8px 87px;
+  }
+
+  .index-header__title {
+    max-width: 414px;
+    @include Oswald(400, 60px, 60px);
+    color: #000;
+  }
+
+  .index-header__description {
+    @include Oswald(400, 20px, 20px);
+    color: #000;
+    margin-top: 41px;
+  }
+
+  .index-header__wrapper--img {
+    position: relative;
+    margin-top: 12px;
+  }
+
+  .main-header__button {
+    position: absolute;
+    top: 29px;
+    left: 83px;
+  }
+
+  .button--choose-program {
+    @include Oswald(400, 20px, 20px);
+    padding: 17px 26px;
+  }
+
+}
+
+@media (min-width: $desctop-width) {
+  .main-header__button {
+    position: absolute;
+    top: 32px;
+    left: 83px;
+  }
 }
