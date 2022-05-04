@@ -1,5 +1,6 @@
 .how-it-works {
   margin-bottom: 42px;
+  padding: 0 20px;
 }
 
 .how-it-works__title {
@@ -16,6 +17,51 @@
   padding: 0;
 }
 
+.how-it-works__item {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding-left: 80px;
+
+}
+
+.how-it-works__item--leaf {
+  background-image: url(/source/img/hitw-leaf.svg);
+  background-repeat: no-repeat;
+
+  @media(min-width: $tablet-width) {
+    background-image: url(/source/img/hitw-leaf-tablet.svg)
+  }
+}
+
+.how-it-works__item--water {
+  background-image: url(/source/img/hitw-water.svg);
+  background-repeat: no-repeat;
+
+  @media(min-width: $tablet-width) {
+    background-image: url(/source/img/hitw-water-tablet.svg)
+  }
+}
+
+.how-it-works__item--food {
+  background-image: url(/source/img/hitw-food.svg);
+  background-repeat: no-repeat;
+
+  @media(min-width: $tablet-width) {
+    background-image: url(/source/img/hitw-food-tablet.svg)
+  }
+}
+
+.how-it-works__item--alarm {
+  background-image: url(/source/img/hitw-alarm.svg);
+  background-repeat: no-repeat;
+
+  @media(min-width: $tablet-width) {
+    background-image: url(/source/img/hitw-alarm-tablet.svg)
+  }
+}
+
+
 .how-it-works__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -27,9 +73,52 @@
 }
 
 @media (min-width: $tablet-width) {
+  .how-it-works {
+    margin-bottom: 104px;
+    padding:0;
+    padding-right: 89px;
+  }
+  .how-it-works__title {
+    @include Oswald(400, 60px, 60px);
+    margin-bottom: 72px;
+  }
+
   .how-it-works__list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 630px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    row-gap: 37px;
+  }
+
+  .how-it-works__item--water,
+  .how-it-works__item--alarm {
+    grid-column: -2/-1;
+  }
+
+  .how-it-works__item {
+    padding: 0;
+    padding-top: 111px;
+  }
+  .how-it-works__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
+
+  .how-it-works__description {
+    @include Arial(16px, 24px);
+  }
+}
+
+@media (min-width: $desctop-width) {
+  .how-it-works {
+    padding: 0;
+    margin-bottom: 68px;
+  }
+
+  .how-it-works__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 83px;
+  }
+  .how-it-works__item--water,
+  .how-it-works__item--alarm {
+    grid-column: auto;
   }
 }

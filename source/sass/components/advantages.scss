@@ -62,6 +62,7 @@
 @media (min-width: $tablet-width) {
   .advantages {
     padding: 0;
+    margin-bottom: 45px;
   }
 
   .advantages__item {
@@ -130,10 +131,11 @@
 @media (min-width: $desctop-width) {
   .advantages {
     margin-top: 180px;
+    margin-bottom: 71px;
   }
   .advantages__list {
     display: grid;
-    grid-template-columns: 570px 570px;
+    grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     row-gap: 40px;
     margin: 0;

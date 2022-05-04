@@ -48,8 +48,8 @@ body {
     min-width: $tablet-width;
   }
   @media (min-width: $desctop-width){
-    width: $desctop-width;
-    margin: 0 auto;
+    min-width: $desctop-width;
+    // margin: 0 auto;
   }
 }
 
