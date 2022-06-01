@@ -61,6 +61,10 @@
     margin-top: 12px;
   }
 
+  .main__header__img {
+    width: 709px;
+  }
+
   .main-header__button {
     position: absolute;
     top: 29px;
@@ -74,10 +78,21 @@
 
 }
 
-@media (min-width: $desctop-width) {
+@media (min-width: $desktop-width) {
   .main-header__button {
     position: absolute;
     top: 32px;
     left: 83px;
+  }
+
+  .main__header__img {
+    width: 552px;
+    position: relative;
+    left: 429px;
+    top: -178px;
+  }
+
+  .index-header__wrapper--text {
+    margin-top: 103px;
   }
 }

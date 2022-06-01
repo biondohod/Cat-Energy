@@ -47,8 +47,8 @@ body {
   @media (min-width: $tablet-width) {
     min-width: $tablet-width;
   }
-  @media (min-width: $desctop-width){
-    min-width: $desctop-width;
+  @media (min-width: $desktop-width){
+    min-width: $desktop-width;
     // margin: 0 auto;
   }
 }
@@ -57,8 +57,8 @@ main {
   @media (min-width: $tablet-width) {
     padding: 30px;
   }
-  @media (min-width: $desctop-width) {
-    padding: 0 110px;
+  @media (min-width: $desktop-width) {
+    padding: 0px;
     margin: 0 auto;
   }
 }

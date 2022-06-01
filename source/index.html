@@ -13,7 +13,11 @@
   <header class="page-header">
     <div class="page-header__logo__button__wrapper">
       <a class="page-header__logo--icon" href="#">
-        <img src="./img/logo-mobile.svg" width="34" height="38" alt="Cat Energy.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="/source/img/logo-desktop.svg">
+          <soucre media="(min-width: 768px)" srcset="/source/img/logo-tablet.svg">
+            <img src="./img/logo-mobile.svg" width="34" height="38" alt="Cat Energy.">
+        </picture>
       </a>
       <a class="page-header__logo--text" href="#">
         <img src="./img/cat-energy-logo.svg" width="101" height="18" alt="Cat Energy.">
@@ -45,8 +49,12 @@
         <p class="main-header__description index-header__description">Занялся собой? Займись котом!</p>
       </div>
       <div class="index-header__wrapper--img">
-        <img class="main__header__img" src="/source/img/index-product-mobile.png" width="280px" height="270px"
-          alt="Пример товара.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="/source/img/index-product-desktop.png">
+          <source media="(min-width: 768px)" srcset="/source/img/index-product-tablet.png">
+          <img class="main__header__img" src="/source/img/index-product-mobile.png" width="280px" height="270px"
+            alt="Пример товара.">
+        </picture>
         <a class="main-header__button button button--choose-program" href="form.html">Подобрать программу</a>
       </div>
     </header>
@@ -122,29 +130,36 @@
             без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в
             день.
           </p>
-          <dl class="examples--story__list story__list">
-            <div class="examples--story__item story__item">
-              <dt class="examples--story__info story__info">5 кг</dt>
-              <dl class="examples--story__info__description story__info__description">Снижение веса</dl>
-            </div>
-            <div class="examples--story__item story__item">
-              <dt class="examples--story__info story__info">60 дней</dt>
-              <dl class="examples--story__info__description story__info__description">Затрачено времени
-              </dl>
-            </div>
-          </dl>
-          <p class="examples--story__price story__price">Затраты на питание: 15 000 РУБ. </p>
+          <div class="examples--story__wrapper--second">
+            <dl class="examples--story__list story__list">
+              <div class="examples--story__item story__item">
+                <dt class="examples--story__info story__info">5 кг</dt>
+                <dl class="examples--story__info__description story__info__description">Снижение веса</dl>
+              </div>
+              <div class="examples--story__item story__item">
+                <dt class="examples--story__info story__info">60 дней</dt>
+                <dl class="examples--story__info__description story__info__description">Затрачено времени
+                </dl>
+              </div>
+            </dl>
+            <p class="examples--story__price story__price">Затраты на питание: 15 000 РУБ. </p>
+          </div>
         </div>
         <!-- Пример с фото -->
         <div class="examples--live__wrapper live-example">
-          <img src="/source/img/cat-before.png" width="311" heght="232" alt="Пример изменений кота.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="/source/img/image-cat-tablet.png">
+            <source media="(min-width: 768px)" srcset="/source/img/image-cat-desktop.png">
+            <img class="examples--live__cat--before" src="/source/img/cat-before-mobile.png" width="311" heght="232"
+              alt="Пример изменений кота.">
+          </picture>
           <div class="examples--live__range range">
             <span class="examples--live__range--before range__description">
               Было
             </span>
             <div class="examples--live__range-scale range-scale">
               <div class="range-bar">
-                <button class="range-button">
+                <button class="range-button range-button--before">
                   <span class="visually-hidden">Двигайте, чтобы наблюдать за изменениями</span>
                 </button>
               </div>
