@@ -37,6 +37,10 @@
 
 
 @media (min-width: $tablet-width) {
+
+  .index-header {
+    padding: 30px;
+  }
   .index-header__wrapper--text {
     min-height: min-content;
     background: none;

@@ -40,22 +40,26 @@
   font-display: swap;
 }
 
+html, body{width:100%;  overflow-x:hidden}
+
 body {
   margin: 0;
   @include Arial(14px, 18px);
   min-width: 320px;
   @media (min-width: $tablet-width) {
     min-width: $tablet-width;
+    margin: 0 auto;
   }
   @media (min-width: $desktop-width){
     min-width: $desktop-width;
-    // margin: 0 auto;
+    margin: 0 auto;
   }
 }
 
 main {
   @media (min-width: $tablet-width) {
-    padding: 30px;
+    padding: 0px;
+    margin: 0 auto;
   }
   @media (min-width: $desktop-width) {
     padding: 0px;

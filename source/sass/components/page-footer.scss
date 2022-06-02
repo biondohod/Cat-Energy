@@ -1,12 +1,16 @@
-
+.page-footer {
+  background-color: #F2F2F2;
+}
 
 .cooperation {
-  padding: 0 19px;
-  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 4px 22px 19px;
+  background-color: #fff;
 }
 
 .cooperation__title {
-  @include Oswald(400,16px,18px);
+  @include Oswald(400, 16px, 18px);
   text-transform: uppercase;
   color: #111;
 }
@@ -24,25 +28,260 @@
   margin: 0;
 }
 
-.page-footer__cooperation__location {
-  margin-top: 22px;
+.map {
+  border: none;
 }
 
 .contacts {
-  background-color: #f2f2f2;
-  padding: 39px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 20px 22px 20px;
 }
 
+.page-footer__logo {
+  position: relative;
+  margin-bottom: 32px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__logo::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 280px;
+  height: 10px;
+  background-color: #D9D9D9;
+  content: "bvbvbvb";
+}
+
+
+
 .contacts__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   list-style-type: none;
-  padding: 0;
+  padding: 20px 0;
+  padding-bottom: 10px;
+}
+
+
+.page-footer__contacts__list__wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #D9D9D9;
+    content: "";
+  }
+  &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+      width: 100%;
+      height: 1px;
+      background-color: #D9D9D9;
+      content: "";
+  }
+}
+
+.contacts__item {
+  margin-bottom: 10px;
+}
+.contacts__item:not(:last-child) {
+  margin-right: 33px;
 }
 
 .page-footer__contacts__list {
   margin: 0;
 }
 
+.page-footer__contacts__copyright__wrapper {
+  margin-top: 22px;
+}
+
+.contacts__link--vk {
+  display: flex;
+  width: 23px;
+  height: 16px;
+  &:hover {
+    .contacts__link--vk__icon {
+      fill: #68B738;
+    }
+  }
+  &:active {
+    .contacts__link--vk__icon {
+      fill: #68B738;
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts__link--insta {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  &:hover {
+    .contacts__link--insta__icon {
+      fill: #68B738;
+    }
+  }
+  &:active {
+    .contacts__link--insta__icon {
+      fill: #68B738;
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts__link--facebook {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  fill: #666;
+  &:hover {
+    .contacts__link--facebook__icon {
+      fill: #68B738;
+    }
+  }
+  &:active {
+    .contacts__link--facebook__icon {
+      fill: #68B738;
+      opacity: 0.3;
+    }
+  }
+}
+
+.contacts__copyright__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .contacts__copyright {
   @include Arial(16px, 18px);
   color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &:hover {
+    .copyright__icon {
+      fill: #68B738;
+    }
+  }
+}
+
+
+
+
+@media (min-width: $tablet-width) {
+  .cooperation {
+    padding: 66px 71px 51px 71px;
+  }
+
+  .cooperation__title {
+    @include Oswald(400, 20px, 21px);
+    max-width: 170px;
+  }
+
+  .cooperation__address {
+    @include Arial(16px, 20px);
+    max-width: 160px;
+  }
+
+  .map {
+    height: 400px;
+  }
+
+  .contacts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 30px 60px 30px;
+  }
+
+  .page-footer__logo {
+    margin: 0;
+  }
+
+  .page-footer__contacts__list__wrapper {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .contacts__list {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: auto;
+    min-width: 130px;
+    max-width: 360px;
+  }
+
+  .contacts__item {
+    margin: 5px 25px;
+  }
+
+  .contacts__link--vk {
+    width: 30px;
+    height: 22px;
+  }
+
+  .contacts__link--vk__icon {
+    width: 30px;
+    height: 22px;
+  }
+
+  .contacts__link--insta {
+    width: 23px;
+    height: 23px;
+  }
+
+  .contacts__link--insta__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .contacts__link--facebook {
+    width: 28px;
+    height: 33px;
+  }
+
+  .contacts__link--facebook__icon {
+    width: 28px;
+    height: 33px;
+  }
+
+  .contacts__copyright__wrapper {
+    width: auto;
+    min-width: 163px;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__cooperation__wrapper {
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 110px;
+    min-width: 570px;
+  }
 }

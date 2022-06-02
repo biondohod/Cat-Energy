@@ -20,6 +20,18 @@
   }
 }
 
+.button--choose-program {
+  &:hover {
+    background-color: #5EAA2F;
+  }
+  &:active {
+    background-color: #5EAA2F;
+    .button--choose-program__text {
+      opacity: 0.3;
+    }
+  }
+}
+
 
 @media (min-width: $tablet-width) {
   .page-header {
@@ -29,6 +41,14 @@
   }
   .page-header__logo__button__wrapper {
     padding: 0;
+  }
+  .page-header__logo--text {
+    display: none;
+  }
+
+  .page-header__logo {
+    width: 174px;
+    height: 52px;
   }
 }
 
@@ -41,6 +61,11 @@
     align-items: flex-start;
     padding-top: 53px;
     padding-left: 110px;
+  }
+
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
   }
 }
 

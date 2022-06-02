@@ -75,8 +75,8 @@
 @media (min-width: $tablet-width) {
   .how-it-works {
     margin-bottom: 104px;
-    padding:0;
-    padding-right: 89px;
+    padding:0 30px;
+    padding-right: 119px;
   }
   .how-it-works__title {
     @include Oswald(400, 60px, 60px);
@@ -110,7 +110,7 @@
 @media (min-width: $desktop-width) {
   .how-it-works {
     padding: 0 110px;
-    margin-bottom: 68px;
+    margin-bottom: 268px;
   }
 
   .how-it-works__list {

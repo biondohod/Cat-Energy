@@ -57,11 +57,17 @@
   background-image: url(/source/img/advantages-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 0 center;
+  &:hover {
+    background-image: url("/source/img/advantages-arrow-hover.svg");
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    padding: 0;
+    padding: 0 30px;
     margin-bottom: 45px;
   }
 
