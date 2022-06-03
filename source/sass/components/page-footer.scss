@@ -113,55 +113,47 @@
   margin-top: 22px;
 }
 
-.contacts__link--vk {
-  display: flex;
-  width: 23px;
-  height: 16px;
-  &:hover {
-    .contacts__link--vk__icon {
+.contacts__link  {
+  &:hover
+    .contacts__link__icon {
       fill: #68B738;
+      &--facebook {
+        fill: none;
+        stroke: #68B738;
+      }
     }
-  }
-  &:active {
-    .contacts__link--vk__icon {
+
+  &:active
+    .contacts__link__icon {
       fill: #68B738;
       opacity: 0.3;
-    }
+      &--facebook {
+        fill: none;
+        stroke: #68B738;
+      }
   }
 }
 
-.contacts__link--insta {
-  display: flex;
-  width: 16px;
-  height: 16px;
-  &:hover {
-    .contacts__link--insta__icon {
-      fill: #68B738;
-    }
-  }
-  &:active {
-    .contacts__link--insta__icon {
-      fill: #68B738;
-      opacity: 0.3;
-    }
-  }
-}
 
-.contacts__link--facebook {
+.contacts__link__icon {
   display: flex;
-  width: 22px;
-  height: 22px;
   fill: #666;
-  &:hover {
-    .contacts__link--facebook__icon {
-      fill: #68B738;
-    }
+
+  &--vk {
+    width: 23px;
+    height: 16px;
   }
-  &:active {
-    .contacts__link--facebook__icon {
-      fill: #68B738;
-      opacity: 0.3;
-    }
+
+  &--insta {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--facebook {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: #666;
   }
 }
 
@@ -174,19 +166,25 @@
 
 .contacts__copyright {
   @include Arial(16px, 18px);
+  width: 100%;
   color: #444;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &:hover {
-    .copyright__icon {
-      fill: #68B738;
-    }
-  }
+  text-decoration: none;
 }
 
+.copyright__icon {
+  fill: #666;
+}
 
+.contacts__copyright:hover .copyright__icon {
+  fill:#68B738;
+}
 
+.contacts__copyright:active {
+  opacity: 0.3;
+}
 
 @media (min-width: $tablet-width) {
   .cooperation {
@@ -240,34 +238,21 @@
     margin: 5px 25px;
   }
 
-  .contacts__link--vk {
-    width: 30px;
-    height: 22px;
-  }
+  .contacts__link__icon {
+    &--vk {
+      width: 30px;
+      height: 22px;
+    }
 
-  .contacts__link--vk__icon {
-    width: 30px;
-    height: 22px;
-  }
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
 
-  .contacts__link--insta {
-    width: 23px;
-    height: 23px;
-  }
-
-  .contacts__link--insta__icon {
-    width: 23px;
-    height: 23px;
-  }
-
-  .contacts__link--facebook {
-    width: 28px;
-    height: 33px;
-  }
-
-  .contacts__link--facebook__icon {
-    width: 28px;
-    height: 33px;
+    &--facebook {
+      width: 28px;
+      height: 33px;
+    }
   }
 
   .contacts__copyright__wrapper {
