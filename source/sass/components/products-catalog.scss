@@ -1,0 +1,241 @@
+.products-catalog__title {
+  margin: 0;
+}
+
+.catalog__title {
+  @include Oswald(400, 36px, 36px);
+  padding-top: 27px;
+  padding-bottom: 41px;
+  border-top: 1px solid #E6E6E6;
+  border-bottom: 1px solid #E6E6E6;;
+  text-align: center;
+}
+
+.products-catalog__list {
+  margin: 0;
+}
+
+.catalog__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.catalog__item {
+  padding: 14px 20px;
+  padding-top: 19px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.catalog__item__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__item__image {
+  width: 140px;
+}
+
+.catalog__item__info__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.products-catalog__item__name {
+  margin-bottom: 18px;
+}
+
+.catalog__item__name {
+  display: flex;
+  align-self: flex-start;
+  max-width: 76px;
+  @include Oswald(400, 16px, 20px);
+  text-transform: uppercase;
+}
+
+.catalog__item__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-catalog__item__button {
+  margin-top: 13px;
+}
+
+.catalog__item__button {
+  @include Oswald(400, 16px, 16px);
+}
+
+.show-more__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  padding-top: 79px;
+  border-bottom: 1px solid #E6E6E6;
+  &::before {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 30px;
+    height: 2px;
+    transform: translateX(-50%);
+    background-color: #D3D3D3;
+    content: "";
+  }
+  &::after {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    width: 30px;
+    height: 2px;
+    background-color: #D3D3D3;
+    content: "";
+  }
+}
+
+.products-catalog__show-more__text {
+  margin-bottom: 8px;
+}
+
+.show-more__text {
+  @include Oswald(400, 16px, 20px);
+  text-transform: uppercase;
+}
+
+.show-more__description {
+  @include Arial(12px, 16px);
+}
+.products-catalog__show-more__description {
+  margin-bottom: 21px;
+}
+
+.show-more__button {
+  @include Oswald(400, 16px, 16px);
+  color: #444;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+  padding: 12px 20px;
+  width: 100%;
+  &:hover {
+    background-color: #EBEBEB;
+  }
+  &:active {
+    .show-more__button__text {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .products-catalog__title {
+    margin-top: 41px;
+    margin-left: 30px;
+    margin-bottom: 164px;
+  }
+  .catalog__title {
+    @include Oswald(400, 60px, 60px);
+    padding: 0;
+    border: none;
+    text-align: left;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 140px;
+    padding: 0 30px;
+  }
+
+  .catalog__item__wrapper {
+    flex-direction: column;
+  }
+
+  .catalog__item {
+    padding: 40px 36px;
+    padding-top: 0;
+    border: none;
+    background-color: #f2f2f2;
+  }
+
+  .catalog__item__image {
+    width: 168px;
+    height: 200px;
+    position: relative;
+    top: -73px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: -39px;
+  }
+
+  .products-catalog__item__name {
+    margin: 0 auto;
+    margin-bottom: 21px;
+  }
+
+  .catalog__item__name {
+    @include Oswald(400, 20px, 24px);
+    max-width: 140px;
+    text-align: center;
+  }
+
+  .products-catalog__item__info:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .catalog__item__info {
+    border-bottom: 1px solid #CDCDCD;
+  }
+
+  .catalog__item__info__text {
+    @include Arial(16px, 16px);
+    padding-bottom: 9px;
+  }
+
+  .catalog__item__button {
+    line-height: 20px;
+    margin-top: 33px;
+  }
+
+  .show-more__wrapper {
+    padding: 38px;
+    padding-top: 161px;
+    border: 2px solid #F2F2F2;
+    &::after {
+      width: 60px;
+      top: 82px;
+    }
+    &::before {
+      width: 60px;
+      top: 82px;
+    }
+  }
+
+  .products-catalog__show-more__text {
+    margin-bottom: 23px;
+  }
+
+  .show-more__text {
+    @include Oswald(400, 20px, 22px);
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .products-catalog__show-more__description {
+    margin-bottom: 87px;
+  }
+
+  .show-more__description {
+    @include Arial(16px, 18px);
+    text-align: center;
+    padding: 0 10px;
+  }
+}

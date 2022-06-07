@@ -21,7 +21,7 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: url("/source/fonts/oswaldregular.woff2") format("woff2");
+  src: url("../fonts/oswaldregular.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -29,22 +29,30 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src: url("/source/fonts/oswaldmedium.woff2") format("woff2");
+  src: url("../fonts/oswaldmedium.woff2") format("woff2");
   font-display: swap;
 }
 @font-face {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
-  src: url("/source/fonts/Arial.woff2") format("woff2");
+  src: url("../fonts/Arial.woff2") format("woff2");
   font-display: swap;
 }
 
-html, body{width:100%;  overflow-x:hidden}
+html,
+body {
+  height: 100%;
+  width:100%;
+  overflow-x:hidden
+}
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   @include Arial(14px, 18px);
+  color: #000;
   min-width: 320px;
   @media (min-width: $tablet-width) {
     min-width: $tablet-width;
@@ -57,13 +65,14 @@ body {
 }
 
 main {
+  flex-grow: 1;
   @media (min-width: $tablet-width) {
     padding: 0px;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
   @media (min-width: $desktop-width) {
     padding: 0px;
-    margin: 0 auto;
+    // margin: 0 auto;
   }
 }
 
@@ -83,7 +92,15 @@ img {
   text-transform: uppercase;
   padding: 11px 44px;
   background-color: #68B738;
-
+  &:hover {
+    background-color: #5EAA2F;
+  }
+  &:active {
+    background-color: #5EAA2F;
+    .button__text {
+      opacity: 0.3;
+    }
+  }
 }
 
 

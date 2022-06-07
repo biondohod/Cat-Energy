@@ -1,0 +1,35 @@
+
+.site-list__link--catalog {
+  color: #000;
+}
+
+
+
+@media (min-width: $tablet-width) {
+  .catalog-nav__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+  .site-list__link--active--catalog {
+    cursor: default;
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 1;
+    }
+  }
+    .site-list__link--active--catalog::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #68B738;
+      content:"";
+    }
+    .page-header--catalog {
+      margin: 0;
+    }
+  }
+

@@ -20,17 +20,6 @@
   }
 }
 
-.button--choose-program {
-  &:hover {
-    background-color: #5EAA2F;
-  }
-  &:active {
-    background-color: #5EAA2F;
-    .button--choose-program__text {
-      opacity: 0.3;
-    }
-  }
-}
 
 
 @media (min-width: $tablet-width) {

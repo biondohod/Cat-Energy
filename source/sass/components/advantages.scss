@@ -29,13 +29,13 @@
   &--slim {
     min-height: 53px;
     padding-left: 69px;
-    background-image: url(/source/img/mobile-slim.svg);
+    background-image: url(../img/mobile-slim.svg);
     background-repeat: no-repeat;
   }
   &--weight {
     min-height: 50px;
     padding-left: 78px;
-    background-image: url(/source/img/mobile-weight.svg);
+    background-image: url(../img/mobile-weight.svg);
     background-repeat: no-repeat;
     margin-left: -7px;
   }
@@ -54,11 +54,11 @@
   text-decoration: none;
   color: #000;
   padding-right: 47px;
-  background-image: url(/source/img/advantages-arrow.svg);
+  background-image: url(../img/advantages-arrow.svg);
   background-repeat: no-repeat;
   background-position: right 0 center;
   &:hover {
-    background-image: url("/source/img/advantages-arrow-hover.svg");
+    background-image: url("../img/advantages-arrow-hover.svg");
   }
   &:active {
     opacity: 0.3;
@@ -86,7 +86,7 @@
       width: 200px;
       height: 211px;
       transform: translateY(-50%);
-      background-image: url("/source/img/tablet-slim.svg");
+      background-image: url("../img/tablet-slim.svg");
       background-repeat: no-repeat;
       content: "";
     }
@@ -101,7 +101,7 @@
       width: 268px;
       height: 200px;
       // transform: translateY(-50%);
-      background-image: url("/source/img/tablet-weight.svg");
+      background-image: url("../img/tablet-weight.svg");
       background-repeat: no-repeat;
       content: "";
     }
@@ -170,12 +170,12 @@
     &--slim {
       min-height: 106px;
       padding-left: 162px;
-      background-image: url("/source/img/desctop-slim.svg");
+      background-image: url("../img/desctop-slim.svg");
     }
     &--weight {
       min-height: 100px;
       padding-left: 181px;
-      background-image: url("/source/img/desctop-weight.svg");
+      background-image: url("../img/desctop-weight.svg");
     }
   }
 }

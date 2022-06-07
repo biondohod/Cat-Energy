@@ -1,0 +1,199 @@
+.catalog__additional {
+  position: relative;
+  padding: 0 20px;
+  &::before {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    left: 267px;
+    height: 2px;
+    background-color: #68B738;;
+    content: "";
+  }
+}
+
+.products-catalog__additional__title {
+  margin: 0;
+  margin-top: 28px;
+  margin-bottom: 35px;
+  @include Oswald(400, 24px, 24px)
+}
+
+.catalog__additional__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__additional__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #E6E6E6;
+  &:first-child {
+    border-top: 1px solid #E6E6E6;;
+  }
+}
+.products-catalog__additional__name {
+  margin-bottom: 13px;
+}
+.catalog__additional__name {
+  display: flex;
+  @include Oswald(400, 16px, 16px);
+  text-transform: uppercase;
+}
+.products-catalog__additional__info__wrapper {
+  margin-bottom: 15px;
+}
+.catalog__additional__info__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
+.catalog__additional__info {
+  @include Arial(14px, 14px);
+}
+
+.button__text {
+  @include Oswald(400, 16px, 16px);
+}
+
+.products-catalog__additional__bonus__wrapper {
+  margin-bottom: 35px;
+}
+
+.bonus__wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 50px;
+  padding-top: 186px;
+  padding-bottom: 43px;
+  background: #68B738 url("../img/catalog/background-mobile.png") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  &::before {
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/catalog/gift-mobile.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+.bonus__text {
+  @include Arial(16px, 20px);
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__additional {
+    padding: 0 30px;
+    &::before {
+      left: 441px;
+      top: 23px;
+    }
+    &::after {
+      position: absolute;
+      top: 23px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background-color: #68B738;;
+      content: "";
+    }
+  }
+
+  .products-catalog__additional__title {
+    margin-top: 68px;
+    margin-bottom: 80px;
+    margin-left: 37px;
+  }
+
+  .catalog__additional__title {
+    @include Oswald(400, 36px, 36px);
+  }
+
+  .products-catalog__additional__list {
+    margin-bottom: 69px;
+  }
+
+  .catalog__additional__list {
+    padding: 0 38px;
+    border: 1px solid #CDCDCD
+  }
+
+  .catalog__additional__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    border: none;
+    padding-top: 26px;
+    padding-bottom: 28px;
+    &:first-child {
+      border: none;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: -38px;
+      right: -38px;
+      height: 1px;
+      background-color: #CDCDCD;
+      content: "";
+    }
+
+    &:last-child::after {
+        content: none;
+    }
+  }
+
+  .products-catalog__additional__name {
+    margin: 0;
+  }
+
+  .catalog__additional__name {
+    @include Oswald(400, 20px, 20px);
+  }
+
+  .products-catalog__additional__info__wrapper {
+    margin: 0;
+  }
+
+  .catalog__additional__info {
+    @include Arial(16px, 20px);
+  }
+
+  .products-catalog__additional__item__button {
+    grid-column: 1/-1;
+    margin-top: 27px;
+  }
+
+  .products-catalog__additional__bonus__wrapper {
+    margin-bottom: 76px;
+  }
+
+  .bonus__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    min-height: 200px;
+    background-image: url("../img/catalog/background-tablet.png");
+    &::before {
+      top: 57px;
+      left: 78px;
+      width: 80px;
+      height: 82px;
+      background-size: cover;
+    }
+  }
+
+  .bonus__text {
+    padding: 70px 124px;
+    padding-left: 423px;
+  }
+}

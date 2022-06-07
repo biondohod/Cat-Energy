@@ -26,38 +26,38 @@
 }
 
 .how-it-works__item--leaf {
-  background-image: url(/source/img/hitw-leaf.svg);
+  background-image: url(../img/hitw-leaf.svg);
   background-repeat: no-repeat;
 
   @media(min-width: $tablet-width) {
-    background-image: url(/source/img/hitw-leaf-tablet.svg)
+    background-image: url(../img/hitw-leaf-tablet.svg)
   }
 }
 
 .how-it-works__item--water {
-  background-image: url(/source/img/hitw-water.svg);
+  background-image: url(../img/hitw-water.svg);
   background-repeat: no-repeat;
 
   @media(min-width: $tablet-width) {
-    background-image: url(/source/img/hitw-water-tablet.svg)
+    background-image: url(../img/hitw-water-tablet.svg)
   }
 }
 
 .how-it-works__item--food {
-  background-image: url(/source/img/hitw-food.svg);
+  background-image: url(../img/hitw-food.svg);
   background-repeat: no-repeat;
 
   @media(min-width: $tablet-width) {
-    background-image: url(/source/img/hitw-food-tablet.svg)
+    background-image: url(../img/hitw-food-tablet.svg)
   }
 }
 
 .how-it-works__item--alarm {
-  background-image: url(/source/img/hitw-alarm.svg);
+  background-image: url(../img/hitw-alarm.svg);
   background-repeat: no-repeat;
 
   @media(min-width: $tablet-width) {
-    background-image: url(/source/img/hitw-alarm-tablet.svg)
+    background-image: url(../img/hitw-alarm-tablet.svg)
   }
 }
 
