@@ -240,3 +240,39 @@
     padding: 0 10px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .products-catalog__title {
+    margin: 74px 0 165px 110px;
+  }
+
+  .catalog__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 144px;
+    padding: 0 110px;
+  }
+
+  .catalog__item__image {
+    margin-bottom: -27px;
+  }
+
+  .catalog__item__name {
+    line-height: 21px;
+  }
+
+  .show-more__wrapper {
+    min-height: 435px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .show-more__text {
+    padding: 0;
+  }
+
+  .show-more__description {
+    padding: 0;
+    // width: 100%;
+  }
+}

@@ -64,6 +64,7 @@
 .bonus__wrapper {
   position: relative;
   width: 100%;
+  min-height: 289px;
   padding: 0 50px;
   padding-top: 186px;
   padding-bottom: 43px;
@@ -189,11 +190,112 @@
       width: 80px;
       height: 82px;
       background-size: cover;
+      transform: none;
     }
   }
 
   .bonus__text {
     padding: 70px 124px;
     padding-left: 423px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__additional {
+    padding: 0 110px;
+  }
+
+  .catalog__additional {
+    &::after {
+      width: 70px;
+    }
+    &::before {
+      left: 483px;
+    }
+  }
+
+  .products-catalog__additional__title {
+    margin: 76px 0 81px 0;
+  }
+
+  .products-catalog__additional__list {
+    margin: 0;
+  }
+
+  .catalog__additional__list {
+    padding: 0;
+    border: none;
+    flex-grow: 1;
+  }
+
+  .catalog__additional__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #CDCDCD;
+    &:first-child {
+      border-top: 1px solid #CDCDCD;
+      border-bottom: 1px solid #CDCDCD;;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .catalog__additional__name {
+    min-width: 324px;
+  }
+
+  .catalog__additional__info__wrapper {
+    flex-grow: 1;
+  }
+
+  .products-catalog__additional__item__button {
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  .catalog__additional__item__button {
+    min-width: 244px;
+  }
+
+  .products-catalog__additional__bonus__wrapper {
+    margin: 0;
+  }
+
+  .products-catalog__additional__list-info-wrapper {
+    margin-bottom: 86px;
+  }
+
+  .catalog__additional__list-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .products-catalog__additional__bonus__wrapper {
+    margin-left: 40px;
+  }
+
+  .bonus__wrapper {
+    justify-content: center;
+    align-items: flex-end;
+    width: auto;
+    min-width: 245px;
+    min-height: 289px;
+    background-image: url("../img/catalog/background-desktop.png");
+    padding: 41px;
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+
+
+  .bonus__text {
+    padding: 0;
+    max-width: 161px;
   }
 }

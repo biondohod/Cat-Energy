@@ -71,7 +71,7 @@
   }
 
   .site-list {
-    min-width: 440px;
+    min-width: 478px;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -88,7 +88,7 @@
   .site-list__link {
     position: relative;
     display: inline-block;
-    @include Oswald(400, 18px, 24px);
+    @include Oswald(400, 20px, 30px);
     padding: 12px 0;
   }
 

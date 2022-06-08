@@ -31,5 +31,14 @@
     .page-header--catalog {
       margin: 0;
     }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-nav__wrapper {
+    padding-top: 53px;
+    padding-right: 110px;
   }
+}
+
+
 
