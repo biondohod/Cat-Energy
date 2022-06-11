@@ -1,0 +1,130 @@
+.form__program-selection__owner-data {
+  margin: 0;
+}
+
+.program-selection__owner-data {
+  position: relative;
+  border: none;
+  padding: 0;
+  padding-bottom: 13px;
+  &::before {
+    position: absolute;
+    top: -66px;
+    left: 201px;
+    right: -20px;
+    height: 2px;
+    background-color: #68B738;
+    content: "";
+  }
+}
+
+.form__program-selection__owner-data__title {
+  margin-bottom: 32px;
+}
+
+.program-selection__owner-data__title {
+  max-width: 187px;
+  font-size: 24px;
+  line-height: 26px;
+  padding: 0;
+}
+
+.form__program-selection__owner-data__item {
+  margin-bottom: 14px;
+}
+
+.program-selection__owner-data__item {
+  display: flex;
+  align-items: center;
+}
+
+.form__program-selection__owner-data__text {
+  margin-right: 11px;
+}
+
+.program-selection__owner-data__text {
+  text-transform: uppercase;
+}
+
+.program-selection__owner-data__input__wrapper {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+}
+
+.program-selection__owner-data__input {
+  padding: 11px 40px 14px 10px;
+  width: 100%;
+}
+
+.form__program-selection__owner-data__input__icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  &--email {
+    right: 15px;
+  }
+  &--phone {
+    right: 13px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__program-selection__owner-data {
+    margin-bottom: 45px;
+  }
+
+  .program-selection__owner-data {
+    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__program-selection__owner-data__title {
+    margin-bottom: 76px;
+  }
+
+  .program-selection__owner-data__title {
+    max-width: none;
+    width: 100%;
+    font-size: 36px;
+    line-height: 36px;
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: -70px;
+      width: 30px;
+      height: 2px;
+      background-color: #68B738;
+      content: "";
+    }
+    &::after {
+      position: absolute;
+      top: 25px;
+      left: 553px;
+      right: -65px;
+      height: 2px;
+      background-color: #68B738;
+      content: "";
+    }
+  }
+
+  .form__program-selection__owner-data__item {
+    margin-bottom: 20px;
+  }
+
+  .form__program-selection__owner-data__text {
+    margin-right: 16px;
+  }
+
+  .program-selection__owner-data__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .program-selection__owner-data__input {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

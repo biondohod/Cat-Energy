@@ -44,50 +44,71 @@
   </header>
   <!-- основное содержимое -->
   <main class="form-main">
-    <h1 class="form__title program__title">Подбор программы</h1>
-    <p class="form__description program__description">
-      Заполните анкету, и мы подберем программу питания для вашего кота
-    </p>
     <section class="form__program-selection__wrapper program-selection__wrapper">
-      <form class="form__program-selection program-selection">
+      <h1 class="form__program-selection__title program-selection__title">Подбор программы</h1>
+      <p class="form__program-selection__text program-selection__text">
+        Заполните анкету, и мы подберем<br>программу питания для вашего кота
+      </p>
+      <form class="form__program-selection program-selection" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="form__program-selection__cat-data program-selection__cat-data">
           <legend class="visually-hidden">Данные вашего кота</legend>
           <label class="form__program-selection__cat-data__item program-selection__cat-data__item">
             <span class="form__program-selection__cat-data__text program-selection__cat-data__text"> Имя:* </span>
-            <input class="form__program-selection__cat-data__input program-selection__cat-data__input" name="cat-name" type="text" placeholder="Барсик">
+            <input class="form__program-selection__cat-data__input program-selection__cat-data__input" name="cat-name"
+              type="text" placeholder="БАРСИК">
           </label>
           <label class="form__program-selection__cat-data__item program-selection__cat-data__item">
             <span class="form__program-selection__cat-data__text program-selection__cat-data__text"> Вес (кг):* </span>
-            <input class="form__program-selection__cat-data__input program-selection__cat-data__input" name="cat-name" type="number" placeholder="7">
+            <input class="form__program-selection__cat-data__input program-selection__cat-data__input" name="cat-weight"
+              type="number" placeholder="7">
           </label>
           <label class="form__program-selection__cat-data__item program-selection__cat-data__item">
-            <span class="form__program-selection__cat-data__text program-selection__cat-data__text"> Возраст (лет): </span>
-            <input class="form__program-selection__cat-data__input program-selection__cat-data__input" name="cat-name" type="number" placeholder="7">
+            <span class="form__program-selection__cat-data__text program-selection__cat-data__text"> Возраст (лет):
+            </span>
+            <input class="form__program-selection__cat-data__input program-selection__cat-data__input" name="cat-age"
+              type="number" placeholder="7">
           </label>
         </fieldset>
         <fieldset class="form__program-selection__cat-weight program-selection__cat-weight">
           <legend class="visually-hidden">Нужные изменения в весе вашего кота</legend>
-          <label class="form__program-selection__cat-weight__item program-selection__cat-weight__item">
-            <input class="visually-hidden form__program-selection__cat-weight__control-input" type="radio" name="weight-changes" value="Похудение" checked>
-            <span class="form__program-selection__cat-weight__control-radio program-selection__cat-weight__control-radio"></span>
-            <span class="form__program-selection__cat-weight__control-text program-selection__cat-weight__control-text">
-              Похудение
-            </span>
-          </label>
-          <label class="form__program-selection__cat-weight__item program-selection__cat-weight__item">
-            <input class="visually-hidden form__program-selection__cat-weight__control-input" type="radio" name="weight-changes" value="Набор массы">
-            <span class="form__program-selection__cat-weight__control-radio program-selection__cat-weight__control-radio"></span>
-            <span class="form__program-selection__cat-weight__control-text program-selection__cat-weight__control-text">
-              Набор массы
-            </span>
-          </label>
-          <label class="form__program-selection__cat-weight__item program-selection__cat-weight__item">
-            <input class="visually-hidden form__program-selection__cat-weight__control-input" type="radio" name="weight-changes" value="Не знаю">
-            <span class="form__program-selection__cat-weight__control-radio program-selection__cat-weight__control-radio"></span>
-            <span class="form__program-selection__cat-weight__control-text program-selection__cat-weight__control-text">
-              Не знаю (Нужен ваш совет)
-            </span>
-          </label>
+          <ul class="form__program-selection__cat-weight__list program-selection__cat-weight__list">
+            <li class="form__program-selection__cat-weight__list__item program-selection__cat-weight__list__item">
+              <label class="form__program-selection__cat-weight__item program-selection__cat-weight__item">
+                <input class="visually-hidden form__program-selection__cat-weight__control__input" type="radio"
+                  name="weight-changes" value="Похудение" checked>
+                <span
+                  class="form__program-selection__cat-weight__control__radio program-selection__cat-weight__control__radio"></span>
+                <span
+                  class="form__program-selection__cat-weight__control__text program-selection__cat-weight__control__text">
+                  Похудение
+                </span>
+              </label>
+            </li>
+            <li class="form__program-selection__cat-weight__list__item program-selection__cat-weight__list__item">
+              <label class="form__program-selection__cat-weight__item program-selection__cat-weight__item">
+                <input class="visually-hidden form__program-selection__cat-weight__control__input" type="radio"
+                  name="weight-changes" value="Набор массы">
+                <span
+                  class="form__program-selection__cat-weight__control__radio program-selection__cat-weight__control__radio"></span>
+                <span
+                  class="form__program-selection__cat-weight__control__text program-selection__cat-weight__control__text">
+                  Набор массы
+                </span>
+              </label>
+            </li>
+            <li class="form__program-selection__cat-weight__list__item program-selection__cat-weight__list__item">
+              <label class="form__program-selection__cat-weight__item program-selection__cat-weight__item">
+                <input class="visually-hidden form__program-selection__cat-weight__control__input" type="radio"
+                  name="weight-changes" value="Не знаю">
+                <span
+                  class="form__program-selection__cat-weight__control__radio program-selection__cat-weight__control__radio"></span>
+                <span
+                  class="form__program-selection__cat-weight__control__text program-selection__cat-weight__control__text">
+                  Не знаю (Нужен ваш совет)
+                </span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
         <fieldset class="form__program-selection__owner-data program-selection__owner-data">
           <legend class="form__program-selection__owner-data__title program-selection__owner-data__title">
@@ -98,45 +119,119 @@
             <span class="form__program-selection__owner-data__text program-selection__owner-data__text">
               E-mail:*
             </span>
-            <input class="form__program-selection__owner-data__input program-selection__owner-data__input" type="email" name="email" placeholder="kuklachev@gmail.com">
-            <svg class="form_program-selection__owner-data__input__icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <line x1="1.65" y1="5.71997" x2="1.65" y2="13.72" stroke="#222222" stroke-width="1.3"/>
-              <line x1="18.65" y1="5.71997" x2="18.65" y2="13.72" stroke="#222222" stroke-width="1.3"/>
-              <line x1="1" y1="13.07" x2="19" y2="13.07" stroke="#222222" stroke-width="1.3"/>
-              <line x1="1" y1="1.06997" x2="19" y2="1.06997" stroke="#222222" stroke-width="1.3"/>
-              <path d="M18.35 2.90207L10 9.39651L1.65 2.90206V1.36997H4.5L10 1.36997H15H18.35V2.90207Z" stroke="#222222" stroke-width="1.3"/>
-            </svg>
+            <div
+              class="form__program-selection__owner-data__input__wrapper program-selection__owner-data__input__wrapper">
+              <input class="form__program-selection__owner-data__input program-selection__owner-data__input"
+                type="email" name="email" placeholder="KUKLACHEV@GMAIL.COM">
+              <svg
+                class="form__program-selection__owner-data__input__icon form__program-selection__owner-data__input__icon--email"
+                width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="1.65" y1="5.71997" x2="1.65" y2="13.72" stroke="#222222" stroke-width="1.3" />
+                <line x1="18.65" y1="5.71997" x2="18.65" y2="13.72" stroke="#222222" stroke-width="1.3" />
+                <line x1="1" y1="13.07" x2="19" y2="13.07" stroke="#222222" stroke-width="1.3" />
+                <line x1="1" y1="1.06997" x2="19" y2="1.06997" stroke="#222222" stroke-width="1.3" />
+                <path d="M18.35 2.90207L10 9.39651L1.65 2.90206V1.36997H4.5L10 1.36997H15H18.35V2.90207Z"
+                  stroke="#222222" stroke-width="1.3" />
+              </svg>
+            </div>
           </label>
           <label class="form__program-selection__owner-data__item program-selection__owner-data__item">
             <span class="form__program-selection__owner-data__text program-selection__owner-data__text">
               Телефон:*
             </span>
-            <input class="form__program-selection__owner-data__input program-selection__owner-data__input" type="tel" name="tel" placeholder="8 (960) 900-60-90">
-            <svg class="form_program-selection__owner-data__input__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_153_253)">
-              <path d="M17.9 9.4H9.39999V10.6H17.9L15.8 12.7L16.7 13.6L19.8 10.5C19.8974 10.3702 19.95 10.2123 19.95 10.05C19.95 9.88772 19.8974 9.72982 19.8 9.6L16.7 6.5L15.8 7.4L17.9 9.4Z" fill="black"/>
-              <path d="M8.10001 19.4V13.2C8.08846 13.0447 8.02154 12.8987 7.91142 12.7886C7.80131 12.6785 7.65531 12.6116 7.50001 12.6H3.10001C3.10516 12.9167 3.23325 13.2189 3.45718 13.4428C3.68112 13.6668 3.98336 13.7949 4.30001 13.8H6.80001V18.8H3.10001C2.86326 18.8149 2.62591 18.7825 2.40176 18.7048C2.17762 18.6271 1.97115 18.5057 1.79436 18.3475C1.61757 18.1893 1.47399 17.9976 1.37196 17.7834C1.26992 17.5693 1.21148 17.337 1.20001 17.1V3.10001C1.19181 2.6373 1.36516 2.18977 1.68292 1.85331C2.00069 1.51686 2.43758 1.31824 2.90001 1.30001H6.80001V6.30001H4.40001C4.08336 6.30516 3.78112 6.43324 3.55718 6.65718C3.33325 6.88112 3.20516 7.18336 3.20001 7.50001H7.60001C7.75531 7.48846 7.90131 7.42154 8.01142 7.31142C8.12154 7.2013 8.18846 7.05531 8.20001 6.90001V0.600012C8.15232 0.443872 8.06117 0.304534 7.93721 0.198285C7.81325 0.0920352 7.66161 0.0232649 7.50001 1.23734e-05H3.10001C2.70599 -0.0133408 2.31321 0.0511002 1.94411 0.189651C1.57501 0.328202 1.23684 0.538145 0.948933 0.807477C0.661026 1.07681 0.42903 1.40025 0.266207 1.7593C0.103385 2.11835 0.01293 2.50598 1.46306e-05 2.90001V16.8C-0.0289644 17.1977 0.0246504 17.597 0.157487 17.9729C0.290324 18.3489 0.499509 18.6932 0.771886 18.9844C1.04426 19.2756 1.37394 19.5072 1.74019 19.6648C2.10643 19.8224 2.50132 19.9024 2.90001 19.9H7.50001C7.5735 19.915 7.64943 19.9133 7.72216 19.895C7.7949 19.8767 7.86259 19.8423 7.92021 19.7942C7.97783 19.7462 8.02391 19.6859 8.05504 19.6176C8.08616 19.5494 8.10153 19.475 8.10001 19.4Z" fill="black"/>
-              </g>
-              <defs>
-              <clipPath id="clip0_153_253">
-              <rect width="20" height="20" fill="white"/>
-              </clipPath>
-              </defs>
+            <div
+              class="form__program-selection__owner-data__input__wrapper program-selection__owner-data__input__wrapper">
+              <input class="form__program-selection__owner-data__input program-selection__owner-data__input" type="tel"
+                name="tel" placeholder="8 (960) 900-60-90">
+              <svg
+                class="form__program-selection__owner-data__input__icon form__program-selection__owner-data__input__icon--phone"
+                width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_153_253)">
+                  <path
+                    d="M17.9 9.4H9.39999V10.6H17.9L15.8 12.7L16.7 13.6L19.8 10.5C19.8974 10.3702 19.95 10.2123 19.95 10.05C19.95 9.88772 19.8974 9.72982 19.8 9.6L16.7 6.5L15.8 7.4L17.9 9.4Z"
+                    fill="black" />
+                  <path
+                    d="M8.10001 19.4V13.2C8.08846 13.0447 8.02154 12.8987 7.91142 12.7886C7.80131 12.6785 7.65531 12.6116 7.50001 12.6H3.10001C3.10516 12.9167 3.23325 13.2189 3.45718 13.4428C3.68112 13.6668 3.98336 13.7949 4.30001 13.8H6.80001V18.8H3.10001C2.86326 18.8149 2.62591 18.7825 2.40176 18.7048C2.17762 18.6271 1.97115 18.5057 1.79436 18.3475C1.61757 18.1893 1.47399 17.9976 1.37196 17.7834C1.26992 17.5693 1.21148 17.337 1.20001 17.1V3.10001C1.19181 2.6373 1.36516 2.18977 1.68292 1.85331C2.00069 1.51686 2.43758 1.31824 2.90001 1.30001H6.80001V6.30001H4.40001C4.08336 6.30516 3.78112 6.43324 3.55718 6.65718C3.33325 6.88112 3.20516 7.18336 3.20001 7.50001H7.60001C7.75531 7.48846 7.90131 7.42154 8.01142 7.31142C8.12154 7.2013 8.18846 7.05531 8.20001 6.90001V0.600012C8.15232 0.443872 8.06117 0.304534 7.93721 0.198285C7.81325 0.0920352 7.66161 0.0232649 7.50001 1.23734e-05H3.10001C2.70599 -0.0133408 2.31321 0.0511002 1.94411 0.189651C1.57501 0.328202 1.23684 0.538145 0.948933 0.807477C0.661026 1.07681 0.42903 1.40025 0.266207 1.7593C0.103385 2.11835 0.01293 2.50598 1.46306e-05 2.90001V16.8C-0.0289644 17.1977 0.0246504 17.597 0.157487 17.9729C0.290324 18.3489 0.499509 18.6932 0.771886 18.9844C1.04426 19.2756 1.37394 19.5072 1.74019 19.6648C2.10643 19.8224 2.50132 19.9024 2.90001 19.9H7.50001C7.5735 19.915 7.64943 19.9133 7.72216 19.895C7.7949 19.8767 7.86259 19.8423 7.92021 19.7942C7.97783 19.7462 8.02391 19.6859 8.05504 19.6176C8.08616 19.5494 8.10153 19.475 8.10001 19.4Z"
+                    fill="black" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_153_253">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
               </svg>
+            </div>
           </label>
         </fieldset>
         <fieldset class="form__program-selection__comment program-selection__comment">
           <legend class="form__program-selection__comment__title program-selection__comment__title">
             Комментарий
           </legend>
-          <input class="form__program-selection__comment__input" type="text" name="comment"  placeholder="Расскажите обо всех повАдках кота">
+          <textarea class="form__program-selection__comment__input program-selection__comment__input" type="text"
+            name="comment" placeholder="РАССКАЖИТЕ ОБО ВСЕХ ПОВАДКАХ КОТА"></textarea>
         </fieldset>
         <fieldset class="form__program-selection__additional program-selection__additional">
           <legend class="form__program-selection__additional__title program-selection__additional__title">
             Дополнительно
           </legend>
-
+          <ul class="form__program-selection__additional__list program-selection__additional__list">
+            <li class="form__program-selection__additional__list__item program-selection__additional__list__item">
+              <label class="form__program-selection__additional__item program-selection__additional__item">
+                <input class="visually-hidden form__program-selection__additional__control__input" type="checkbox"
+                  name="sweetener" checked>
+                <span
+                  class="form__program-selection__additional__control__checkbox program-selection__additional__control__checkbox"></span>
+                <span
+                  class="form__program-selection__additional__control__text program-selection__additional__control__text">
+                  Cахарозаменитель
+                </span>
+              </label>
+            </li>
+            <li class="form__program-selection__additional__list__item program-selection__additional__list__item">
+              <label class="form__program-selection__additional__item program-selection__additional__item">
+                <input class="visually-hidden form__program-selection__additional__control__input" type="checkbox"
+                  name="water">
+                <span
+                  class="form__program-selection__additional__control__checkbox program-selection__additional__control__checkbox"></span>
+                <span
+                  class="form__program-selection__additional__control__text program-selection__additional__control__text">
+                  Питьевая вода
+                </span>
+              </label>
+            </li>
+            <li class="form__program-selection__additional__list__item program-selection__additional__list__item">
+              <label class="form__program-selection__additional__item program-selection__additional__item">
+                <input class="visually-hidden form__program-selection__additional__control__input" type="checkbox"
+                  name="milk">
+                <span
+                  class="form__program-selection__additional__control__checkbox program-selection__additional__control__checkbox"></span>
+                <span
+                  class="form__program-selection__additional__control__text program-selection__additional__control__text">
+                  Молоко
+                </span>
+              </label>
+            </li>
+            <li class="form__program-selection__additional__list__item program-selection__additional__list__item">
+              <label class="form__program-selection__additional__item program-selection__additional__item">
+                <input class="visually-hidden form__program-selection__additional__control__input" type="checkbox"
+                  name="vitamins">
+                <span
+                  class="form__program-selection__additional__control__checkbox program-selection__additional__control__checkbox"></span>
+                <span
+                  class="form__program-selection__additional__control__text program-selection__additional__control__text">
+                  Витамины
+                </span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
+        <div class="form__program-selection__button__wrapper program-selection__button__wrapper">
+          <button class="form__program-selection__button program-selection__button button" type="submit"> Отправить
+            заявку</button>
+          <p class="form__program-selection__description program-selection__description">
+            * — Обязательные поля
+          </p>
+        </div>
       </form>
     </section>
   </main>

@@ -1,0 +1,114 @@
+.form__program-selection__additional {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.program-selection__additional {
+  padding: 0;
+  border: none;
+}
+
+.form__program-selection__additional__title {
+  margin-bottom: 34px;
+}
+
+.program-selection__additional__title {
+  position: relative;
+  width: 100%;
+  font-size: 24px;
+  line-height: 26px;
+  padding: 0;
+  &::after {
+    position: absolute;
+    top: 16px;
+    left: 184px;
+    right: -20px;
+    height: 2px;
+    background-color: #68B738;
+    content: "";
+  }
+}
+
+.form__program-selection__additional__list {
+  margin: 0;
+}
+
+.program-selection__additional__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.form__program-selection__additional__list__item {
+  margin-bottom: 25px;
+}
+
+.form__program-selection__additional__item {
+  position: relative;
+  padding-left: 46px;
+  display: flex;
+  align-items: center;
+}
+
+.program-selection__additional__control__text {
+  text-transform: uppercase;
+}
+
+.program-selection__additional__control__checkbox {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+  content: "";
+}
+
+.form__program-selection__additional__control__input[type="checkbox"]:checked+ .program-selection__additional__control__checkbox {
+  background-image: url(../img/form/checkbox-checked.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .form__program-selection__additional {
+    margin-bottom: 59px;
+  }
+
+  .form__program-selection__additional__title {
+    margin-bottom: 62px;
+  }
+
+  .program-selection__additional__title {
+    font-size: 36px;
+    line-height: 36px;
+    &::before {
+      position: absolute;
+      top: 25px;
+      left: -70px;
+      width: 30px;
+      height: 2px;
+      background-color: #68B738;
+      content: "";
+    }
+    &::after {
+      top: 25px;
+      left: 252px;
+      right: -65px;
+    }
+  }
+
+  .program-selection__additional__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 123px;
+    row-gap: 62px;
+    padding-right: 68px;
+  }
+
+  .form__program-selection__additional__list__item {
+    margin: 0;
+  }
+
+}
+
