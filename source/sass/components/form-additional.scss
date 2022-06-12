@@ -112,3 +112,21 @@
 
 }
 
+@media (min-width: $desktop-width) {
+  .program-selection__additional__title {
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+    &::after {
+      right: -110px;
+    }
+  }
+
+  .program-selection__additional__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 104px;
+    padding-right: 0;
+  }
+}
+

@@ -72,3 +72,17 @@
     line-height: 30px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form__program-selection__cat-data {
+    margin: 0;
+  }
+
+  .form__program-selection__cat-data__item:last-child {
+    margin: 0;
+  }
+
+  .program-selection__cat-data__input {
+    padding: 10px 14px;
+  }
+}

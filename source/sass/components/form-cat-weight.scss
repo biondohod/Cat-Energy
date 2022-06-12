@@ -101,3 +101,9 @@
     line-height: 30px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .form__program-selection__cat-weight {
+    margin: 0;
+  }
+}

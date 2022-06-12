@@ -55,6 +55,7 @@
 .program-selection__owner-data__input {
   padding: 11px 40px 14px 10px;
   width: 100%;
+  border: 1px solid #E7E7E7;
 }
 
 .form__program-selection__owner-data__input__icon {
@@ -66,6 +67,12 @@
   }
   &--phone {
     right: 13px;
+  }
+  &--email {
+    stroke: #222222;
+  }
+  &--phone {
+    fill: black;
   }
 }
 
@@ -126,5 +133,32 @@
   .program-selection__owner-data__input {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__program-selection__owner-data {
+    margin-bottom: 65px;
+  }
+
+  .program-selection__owner-data__title {
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+    &::after {
+      right: -110px;
+    }
+  }
+
+  .program-selection__owner-data__item__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 78px;
+    row-gap: 65px;
+  }
+
+  .form__program-selection__owner-data__item {
+    margin: 0;
   }
 }

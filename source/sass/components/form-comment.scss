@@ -71,3 +71,15 @@
     height: 174px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .program-selection__comment__title {
+    &::before {
+      left: -110px;
+      width: 70px;
+    }
+    &::after {
+      right: -110px;
+    }
+  }
+}

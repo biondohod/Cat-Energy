@@ -38,6 +38,53 @@
   text-align: center;
 }
 
+.program-selection__input {
+  outline: none;
+  &:hover {
+    border: 1px solid #CDCDCD;
+  }
+  &:active {
+    outline: 2px solid #444444;
+    &+.form__program-selection__owner-data__input__icon--email {
+      stroke: #68B738;
+    }
+    &+.form__program-selection__owner-data__input__icon--phone {
+      fill: #68B738;
+    }
+  }
+  &:focus {
+      outline: 2px solid #444444;
+      &+.form__program-selection__owner-data__input__icon--email {
+        stroke: #68B738;
+      }
+      &+.form__program-selection__owner-data__input__icon--phone {
+        fill: #68B738;
+      }
+    }
+  &:invalid {
+    outline: 2px solid #FF8282;
+    &+.form__program-selection__owner-data__input__icon--email {
+      stroke: #FF8282;
+    }
+    &+.form__program-selection__owner-data__input__icon--phone {
+      fill: #FF8282;
+    }
+  }
+}
+
+.program-selection__control {
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover .program-selection__cat-weight__control__radio,
+  &:hover .program-selection__additional__control__checkbox {
+    border: 1px solid #BABABA;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .program-selection__wrapper {
     padding: 70px;
@@ -68,16 +115,40 @@
 
   .program-selection__button__wrapper {
     display: flex;
-    justify-content: space-between;
-    padding-right: 109px;
   }
 
   .program-selection__button {
     flex-grow: 1;
     width: auto;
+    max-width: 568px;
   }
 
   .form__program-selection__description {
     margin-left: 61px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__program-selection__cat-data__wrapper {
+    margin-bottom: 65px;
+  }
+
+  .program-selection__wrapper {
+    padding: 74px 110px 82px 110px;
+  }
+
+  .form__program-selection__title {
+    left: 0;
+  }
+
+  .program-selection__cat-data__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 65px;
+  }
+
+  .form__program-selection__description {
+    margin-left: 81px;
   }
 }
