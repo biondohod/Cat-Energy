@@ -19,6 +19,7 @@ const rename = require ("gulp-rename");
 const webp = require("gulp-webp");
 const svgstore = require ("gulp-svgstore");
 const del = require("del");
+const htmlmin = require('gulp-htmlmin');
 
 
 // Styles
@@ -32,13 +33,24 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("styles.min.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+//Html
+
+gulp.task('htmlminify', () => {
+  return gulp.src('source/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true,
+    removeComments: true }))
+    .pipe(gulp.dest('build'));
+});
+
+// exports.htmlmin = htmlmin;
 
 // Server
 
@@ -65,8 +77,8 @@ const watcher = () => {
 
 const webpimg = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 10}))
-    .pipe(gulp.dest("build/img"));
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
 }
 
 exports.webp = webpimg;
